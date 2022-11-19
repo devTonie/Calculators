@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+
+
+.input{
+  border: none;
+  background-color: rgba(218, 219, 219, 0.411);
+  color: white;
+  font-weight: 400;
+  font-family: 'Zen Antique Soft';
+  font-size: 20px;
+  width: 45%;
+  height: 5vh;
+}
+
+.select{
+  width: 35%;
+  height: 5.2vh;
+  border: none;
+  background-color: rgba(173, 173, 173, 0.418);
+  color: white;
+  font-weight: 500;
+  font-family: 'Zen Antique Soft';
+  font-size: 20px;
+}
+
+.label{
+  font-family: 'Zen Antique Soft';
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  margin-right: 10px;
+}

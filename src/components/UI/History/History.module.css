@@ -1,0 +1,38 @@
+.wrapper {
+  width: 30%;
+  height: 49.5%;
+  margin-top: 10px;
+  margin-left: 65%;
+  background-color: rgba(155, 146, 146, 0.321);
+}
+
+.item {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 20px;
+  font-weight: 600;
+  padding-top: 5%;
+  padding-left: 10%;
+}
+
+.hr {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+
+.heads {
+  position: absolute;
+  margin-left: 65%;
+  margin-top: -80px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+  position: absolute;
+  height: 9%;
+  width: 30%;
+  color: white;
+  font-size: 32px;
+  font-weight: 600;
+  background-color: rgba(155, 146, 146, 0.321);
+}

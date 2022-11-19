@@ -1,0 +1,47 @@
+.keyboard{
+    display: grid;
+    grid-template-columns: repeat(3, 105px);
+    grid-template-rows: repeat(5, 100px);
+    grid-gap: 5px;
+    margin-right: 5px;
+}
+
+.key{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.key:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.key:focus{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.key::after{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.grid{
+    grid-template-columns: repeat(4, 103px);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.position{
+    display: flex;
+    
+}
+
+
+
+

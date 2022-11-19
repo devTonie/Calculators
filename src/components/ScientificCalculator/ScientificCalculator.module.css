@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
+
+.background {
+  margin-top: 10px;
+  margin-left: 100px;
+  width: 52.8%;
+  height: 520px;
+  background-color: rgba(155, 146, 146, 0.321);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.head {
+  font-family: 'Zen Antique Soft';
+  font-size: 32px;
+  color: white;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+

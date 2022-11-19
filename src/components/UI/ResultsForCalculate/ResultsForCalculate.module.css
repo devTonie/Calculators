@@ -1,0 +1,17 @@
+.position{
+    margin-top: 60px;
+    margin-left: 100px;
+}
+
+.input{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-weight:600;
+    width: 56.5%;
+    height: 80px;
+    background-color: rgba(155, 146, 146, 0.321);
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}

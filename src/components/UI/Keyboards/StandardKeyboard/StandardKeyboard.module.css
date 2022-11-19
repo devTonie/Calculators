@@ -1,0 +1,239 @@
+.keyboard{
+    display: grid;
+    grid-gap: 5px;
+}
+
+.key{
+    background-color: rgba(205, 206, 208, 0.386);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.key:hover{
+    background-color: rgba(162, 163, 163, 0.504);
+    cursor: pointer;
+}
+
+.clear-all{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.clear-all:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.squares{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.squares:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.percent{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.percent:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.percent:focus{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.percent::after{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.decide{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.decide:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.decide:focus{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.decide::after{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.multiply{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.multiply:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.multiply:focus{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.multiply::after{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.minus{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.minus:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.minus:focus{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.minus::after{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.plus{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+
+.plus:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.plus:focus{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.plus::after{
+    background-color: rgba(218, 219, 219, 0.292);
+}
+
+.dot{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+.dot:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.delete{
+    background-color: rgba(231, 232, 234, 0.098);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+.delete:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
+
+.equals{
+    background-color: rgba(4, 20, 51, 0.285);
+    border-radius: 0px;
+    grid-column: span 0;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 17px;
+    font-size: 24px;
+    font-weight: 600;
+    color:white;
+    border: none;
+}
+.equals:hover{
+    background-color: rgba(218, 219, 219, 0.292);
+    cursor: pointer;
+}
