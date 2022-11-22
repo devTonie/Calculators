@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap');
 
-
 .input{
   border: none;
   background-color: rgba(218, 219, 219, 0.411);
@@ -8,12 +7,17 @@
   font-weight: 400;
   font-family: 'Zen Antique Soft';
   font-size: 20px;
-  width: 45%;
+  width: 60%;
   height: 5vh;
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .select{
-  width: 35%;
+  width: 20%;
   height: 5.2vh;
   border: none;
   background-color: rgba(173, 173, 173, 0.418);
@@ -23,10 +27,3 @@
   font-size: 20px;
 }
 
-.label{
-  font-family: 'Zen Antique Soft';
-  font-size: 24px;
-  font-weight: 400;
-  color: white;
-  margin-right: 10px;
-}

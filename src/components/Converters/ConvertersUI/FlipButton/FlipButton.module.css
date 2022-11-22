@@ -1,0 +1,8 @@
+.button{
+    margin: 15px;
+}
+
+.button:hover{
+    color: white;
+    cursor: pointer;
+}

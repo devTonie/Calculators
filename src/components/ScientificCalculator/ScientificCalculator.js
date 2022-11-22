@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Card from "../UI/Card/Card";
+import Header from '../UI/Header/Header';
 import ResultsForCalculate from "../UI/ResultsForCalculate/ResultsForCalculate";
 import ScientificKeyboard from "../UI/Keyboards/ScientificKeyboard/ScientificKeyboard";
 import History from '../UI/History/History';
@@ -217,7 +218,7 @@ const ScientificCalculator = (props) => {
 
   return (
     <Card>
-      <h1 className={classes.head}>Scientific Calculator</h1>
+      <Header>Scientific Calculator</Header>
       <ResultsForCalculate show={input} />
       <div className={classes.background}>
         <ScientificKeyboard onClick={inputHandler} />

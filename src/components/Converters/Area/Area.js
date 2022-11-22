@@ -1,58 +1,77 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from "react";
 
-import Card from '../../UI/Card/Card';
-import ButtonConverter from '../ConvertersUI/ButtonConverter/ButtonConverter';
-import SwapHorizontalCircleIcon from '@mui/icons-material/SwapHorizontalCircle';
-import ConverterInput from '../ConvertersUI/ConverterInput/ConverterInput';
-import classes from './Area.module.css';
+import Card from "../../UI/Card/Card";
+import Header from "../../UI/Header/Header";
+import InputsCard from "../ConvertersUI/InputsCard/InputsCard";
+import convert from "convert-units";
+import FlipButton from "../ConvertersUI/FlipButton/FlipButton";
+import ConverterInput from "../ConvertersUI/ConverterInput/ConverterInput";
 
-const Area = () => {
-  const [ firstAmount, setFirstAmount ] = useState();
-  const [ secondAmount, setSecondAmount ] = useState();
-  const [ fromUnit, setFromUnit ] = useState();
-  const [ toUnit, setToUnit ] = useState();
-  const units = [
-    'square meter (m^2)',
-    'square kilometer (km^2)',
-    'square centimeter (cm^2)',
-    'square millimeter (mm^2)',
-    'hectare (ha)',
-    'acre (ac)',
-    'square mile (mi^2)',
-    'square yard (yd^2)',
-    'square foot (ft^2)',
-    'square inch (in^2)',
-  ];
+const Area = () => {  
+  const [firstAmount, setFirstAmount] = useState(1);
+  const [fromUnit, setFromUnit] = useState(convert().possibilities('area')[0]);
+  const [toUnit, setToUnit] = useState(convert().possibilities('area')[2]);
+  const [secondAmount, setSecondAmount] = useState(convert(firstAmount).from(fromUnit).to(toUnit));
+  const [ flow, setFlow ] = useState('RtoL');
 
+  useEffect(() => {
+    if(flow === 'RtoL'){
+      setSecondAmount(convert(firstAmount).from(fromUnit).to(toUnit));
+    } else if(flow === 'LtoR'){
+      setFirstAmount(convert(secondAmount).from(toUnit).to(fromUnit));
+    }
+  }, [secondAmount ,flow, firstAmount, fromUnit, toUnit])
 
   function onChangeFromProperty(value) {
     setFromUnit(value);
   }
 
-  const onChangeToProperty = value =>{
+  const onChangeToProperty = (value) => {
     setToUnit(value);
+  };
+
+  const onChangeFromAmountHandler = (event) => {
+      setFlow('RtoL');
+      setFirstAmount(event.target.value);
   }
 
-  const onChangeFromAmountHandler = value =>{
-    setFirstAmount(value);
-    onChangeToAmountHandler(firstAmount);
-  }
-  
-  const onChangeToAmountHandler = value =>{
-    setSecondAmount(value);
+  const onChangeToAmountHandler = event =>{
+    setFlow('LtoR');
+    setSecondAmount(event.target.value);
   }
 
-  return <Card>
-    <h1 className={classes.head}>Area Converter</h1>
+  const flipButtonHandler = () =>{
+    setFromUnit(toUnit);
+    setToUnit(fromUnit);
+  }
 
-    <div className={classes.wrapper}>
-        <ConverterInput values={units} className={classes.firstInput} label='From:' placeholder='Amount...' onChangeProperty={onChangeFromProperty} onChangeAmount={onChangeFromAmountHandler} value={firstAmount}/>
-      <div className={classes.center}>
-        <SwapHorizontalCircleIcon />
-      </div>
-        <ConverterInput values={units} label='To:' placeholder='Amount...' onChangeProperty={onChangeToProperty} onChangeAmount={onChangeToAmountHandler} value={secondAmount}/>
-    </div>
-  </Card >
-}
+
+  return (
+    <Card>
+      <Header>Area Converter</Header>
+
+      <InputsCard>
+        <ConverterInput
+          values={convert().possibilities('area')}
+          onChangeProperty={onChangeFromProperty}
+          onChangeAmount={onChangeFromAmountHandler}
+          amount={firstAmount}
+          name='firstInput'
+          value={fromUnit}
+        />
+        <FlipButton flipHandler={flipButtonHandler}/>
+        <ConverterInput
+          values={convert().possibilities('area')}
+          onChangeProperty={onChangeToProperty}
+          onChangeAmount={onChangeToAmountHandler}
+          amount={secondAmount}
+          defaultProperty={convert().possibilities('area')[1]}
+          name='secondInput'
+          value={toUnit}
+        />
+      </InputsCard>
+    </Card>
+  );
+};
 
 export default Area;

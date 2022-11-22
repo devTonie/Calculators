@@ -32,6 +32,18 @@ const Navigation = props => {
     props.areaHandler();
   }
 
+  const temperatureHandler = () =>{
+    props.temperatureHandler();
+  }
+
+  const energyHandler = () =>{
+    props.energyHandler();
+  }
+
+  const timeHandler = () =>{
+    props.timeHandler();
+  }
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.logo}>
@@ -52,9 +64,9 @@ const Navigation = props => {
       <h2>Convertors</h2>
         <MenuButton icon={<MonetizationOnIcon />} onClick={currencyHandler}>Currency</MenuButton>
         <MenuButton icon={<CropIcon />} onClick={areaHandler}>Area</MenuButton>
-        <MenuButton icon={<DeviceThermostatIcon />}>Temperature</MenuButton>
-        <MenuButton icon={<BoltIcon />}>Energy</MenuButton>
-        <MenuButton icon={<QueryBuilderIcon />}>Time</MenuButton>
+        <MenuButton icon={<DeviceThermostatIcon />} onClick={temperatureHandler}>Temperature</MenuButton>
+        <MenuButton icon={<BoltIcon />} onClick={energyHandler}>Energy</MenuButton>
+        <MenuButton icon={<QueryBuilderIcon />} onClick={timeHandler}>Time</MenuButton>
       </div>
     </div>
   );

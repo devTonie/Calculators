@@ -1,26 +1,38 @@
-import React from 'react';
+import React from "react";
 
-import classes from './ConverterInput.module.css';
+import classes from "./ConverterInput.module.css";
 
-const Inputs = props => {
+const Inputs = (props) => {
 
-  const changeAmountHandler = event => {
-    props.onChangeAmount(event.target.value);
-  }
-
-  const onChangeProperty = event =>{
+  const onChangeProperty = (event) => {
     props.onChangeProperty(event.target.value);
-  }
+  };
 
-  return <div className={`${classes.position} ${props.className}`}>
-    <label className={classes.label} htmlFor={props.id}>{props.label}</label>
-    <input className={`${classes.input} ${props.inputStyle}`} type='number' id={props.id} value={props.amount} onChange={changeAmountHandler} placeholder={props.placeholder}/>
-    <select className={`${classes.select} ${props.selectStyle}`} onChange={onChangeProperty}>
-      {props.values.map((item, id) =>
-        <option key={id} value={item}>{item}</option>
-      )}
-    </select>
-  </div>
-}
+  return (
+    <div className={`${classes.position} ${props.className}`}>
+      <input
+        className={`${classes.input} ${props.inputStyle}`}
+        name={props.name}
+        disabled={props.disabled}
+        type="number"
+        id={props.id}
+        value={props.amount}
+        onChange={props.onChangeAmount}
+      />
+      <select
+        className={`${classes.select} ${props.selectStyle}`}
+        onChange={onChangeProperty}
+        defaultValue={props.defaultProperty}
+        value={props.value}
+      >
+        {props.values.map((item, id) => (
+          <option key={id} value={item}>
+            {item}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
+};
 
 export default Inputs;

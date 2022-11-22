@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Card from "../UI/Card/Card";
+import Header from '../UI/Header/Header';
 import ResultsForCalculate from "../UI/ResultsForCalculate/ResultsForCalculate";
 import StandardKeyboard from "../UI/Keyboards/StandardKeyboard/StandardKeyboard";
 import History from "../UI/History/History";
@@ -120,7 +121,7 @@ const StandardCalculator = () => {
 
   return (
     <Card>
-      <h1 className={classes.head}>Standard Calculator</h1>
+      <Header>Standard Calculator</Header>
       <ResultsForCalculate show={input} />
       <div className={classes.background}>
         <StandardKeyboard className={classes.grid} onClick={inputHandler} />
